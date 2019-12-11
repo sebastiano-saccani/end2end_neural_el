@@ -73,5 +73,5 @@ According to The Guardian, one of the messages shared by Ms Blaiklock was from a
 print('processing:')
 print(sentence)
 out = nnprocessing.process(sentence, [])
-print('result')
+print('results:')
 print(out)
