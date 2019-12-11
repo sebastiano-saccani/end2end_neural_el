@@ -195,15 +195,15 @@ class NNProcessing(object):
         filtered_spans, _ = _filtered_spans_and_gm_gt_list(0, *result_l, None, None, None, [0], [len(words)])
 
         # based on final_scores and thr return annotations. also translate my given_spans to char given_spans
-        print("self.special_words_assertion_errors =", self.special_words_assertion_errors)
-        print("gm_idx_errors =", self.gm_idx_errors)
+        #print("self.special_words_assertion_errors =", self.special_words_assertion_errors)
+        #print("gm_idx_errors =", self.gm_idx_errors)
 
         response = []
         for span in filtered_spans:
             score, begin_idx, end_idx, nnid = span
             if score >= self.thr:
                 self._add_response_span(response, span, words2charidx)
-        print("persons_mentions_seen =", self.fetchFilteredCoreferencedCandEntities.persons_mentions_seen)
+        #print("persons_mentions_seen =", self.fetchFilteredCoreferencedCandEntities.persons_mentions_seen)
         return response
 
     def map_words_to_char_positions(self, text):

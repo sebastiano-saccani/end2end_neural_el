@@ -90,6 +90,8 @@ def terminate():
 
 if __name__ == "__main__":
     args, train_args = _parse_args()
+    print(args)
+    print(train_args)
     if args.build_entity_universe:
         buildEntityUniverse = BuildEntityUniverse()
     else:
